@@ -1,0 +1,44 @@
+main{
+    .title{
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .subtitle{
+        text-align: center;
+        color: #718096;
+    }
+    .guideSection{
+        background-color: #EDF2F7;
+
+        
+        .guideContainer{
+            display:flex;
+            flex-direction: column;
+            padding: 20px;
+
+            .sectionTitle{
+                margin-bottom: 20px;
+            }
+
+            .buttons{
+                display:flex;
+                gap: 20px;
+                padding: 20px;
+                
+                .buttonPlayroom {
+                    background-color: #4A5568;
+                    color: #FFFFFF;
+                    padding:10px;
+                    border-radius: 40px;
+                    border: none;
+                }
+                .buttonBirja{
+                    padding:10px;
+                    border-radius: 40px;
+                    border-width: 1px;
+                }
+            }
+        }
+    }
+}
