@@ -1,12 +1,14 @@
-import styles from "./page.module.scss";
+import twstyles from "./twplayroom";
+import PlayroomGrid from "@/components/PlayroomGrid/PlayroomGrid";
 
-export default function Home() {
+export default function Playroom() {
   return (
-    <div className={styles.page}>
-      
-      <main className={styles.main}></main>
-
-      
-    </div>
+    <main className={twstyles.main}>
+      <h1 className={twstyles.title}>Игровая комната</h1>
+      <p className={twstyles.pAfterTitle}>
+        Обменивайте бонусы на реальные эмоции и ценные призы
+      </p>
+      <PlayroomGrid />
+    </main>
   );
 }

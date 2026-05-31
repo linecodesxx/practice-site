@@ -57,7 +57,9 @@ const Navbar = () => {
           Log in
         </button>
         <button type="button" className={styles.account}>
-          <ShoppingCart size={20} />
+          <Link href="/cart">
+            <ShoppingCart size={20} />
+          </Link>
         </button>
         <button type="button" className={styles.account}>
           <User size={20} />
