@@ -4,7 +4,7 @@ const twstyles = {
     bottomCard: "!p-[18px] flex flex-col gap-[7.5px]",
     name: "font-bold",
     price: "font-bold text-[16px] text-orange-400 !tracking-wider", 
-    button: "w-[87px] h-[30px] rounded-3xl !p-[4px] text-[13px] text-grey-200 bg-mauve-200 cursor-pointer hover:bg-mauve-300"
+    button: "w-[87px] h-[30px] rounded-3xl !p-[4px] text-[13px] text-gray-500 bg-mauve-200 cursor-pointer hover:bg-mauve-300"
 }
 
 export default twstyles
