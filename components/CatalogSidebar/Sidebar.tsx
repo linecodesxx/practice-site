@@ -2,7 +2,6 @@ import Link from 'next/link';
 import twstyles from './sidebarStyles';
 
 export function Sidebar() {
-    console.log('Sidebar styles: ', twstyles)
     return (
         <div className={twstyles.sidebar}>
             <h1 className={twstyles.sbTitle}>Категории</h1>
