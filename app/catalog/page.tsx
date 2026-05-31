@@ -1,12 +1,9 @@
-import styles from "./page.module.scss";
 import twstyles from "./twcatalog";
 import { Sidebar } from '../../components/CatalogSidebar/Sidebar';
 import { Card } from "@/components/CatalogCard/Card";
 
 export default function Catalog() {
   return (
-    <div className={twstyles.page}>
-      
       <main className={twstyles.main}>
         <h1 className={twstyles.catTitle}>Каталог товаров</h1>
         <p className={twstyles.pAfterTitle}>
@@ -22,7 +19,5 @@ export default function Catalog() {
           </div>
         </section>
       </main>
-      
-    </div>
   );
 }
