@@ -1,8 +1,10 @@
 import { InfoCard } from "@/components/InfoCard/InfoCard";
 import styles from "./page.module.scss";
+import twstyles from "./twhome";
 import { ProductCard } from "@/components/ProductCard/ProductCard";
 import { BlogCard } from "@/components/BlogCard/BlogCard";
 import Link from "next/link";
+import { ArrowLeftIcon } from "lucide-react";
 
 const Info = [
   {
@@ -101,7 +103,12 @@ export default function Home() {
         </div>
 
         <section id="mini-catalog" className={styles.miniCatalog}>
-          <h2 className={styles.catalogSectionTitle}> Товары из каталога </h2>
+          <div className={twstyles.wrapper}>
+            <h2 className={styles.catalogSectionTitle}> Товары из каталога </h2>
+            <Link className={twstyles.paddingTop} href="#">
+              <span className={twstyles.yellowArray}>Смотреть еще →</span>
+            </Link>
+          </div>
           <div className={styles.products}>
             {Proudcts.map((item) => (
               <ProductCard
@@ -114,7 +121,12 @@ export default function Home() {
         </section>
 
         <section id="company-blog" className={styles.companyBlog}>
-          <h2 className={styles.blogSectionTitle}> Блог компании </h2>
+          <div className={twstyles.wrapper}>
+            <h2 className={styles.blogSectionTitle}> Блог компании </h2>
+            <Link className={twstyles.paddingTop} href="#">
+              <span className={twstyles.yellowArray}>Все статьи →</span>
+            </Link>
+          </div>
           <div className={styles.blogPosts}>
             {BlogPosts.map((item) => (
               <BlogCard
@@ -130,15 +142,15 @@ export default function Home() {
         <section id="feedback" className={styles.feedback}>
           <h2 className={styles.feedbackSectionTitle}> Обратная связь </h2>
           <div className={styles.feedbackForm}>
-            <form action='/feedback' method="post" className={styles.form}>
-              <div className={styles.nameEmail}></div>
-                <input className={styles.input} type="text" placeholder="Ваше имя" />
-                <input className={styles.input} type="email" placeholder="Ваш email" />
-              <div className={styles.message}>
-                <textarea className={styles.textarea} placeholder="Ваше сообщение"></textarea>
+            <form action='/feedback' method="post" className={twstyles.form}>
+              <div className={twstyles.nameAndEmail}>
+                <input className={twstyles.inputs} type="text" placeholder="Ваше имя" />
+                <input className={twstyles.inputs} type="email" placeholder="Ваш email" />
               </div>
-
-              <button type="submit" className={styles.submitButton}>
+              <div className={twstyles.message}>
+                <textarea className={twstyles.textarea} placeholder="Ваше сообщение"></textarea>
+              </div>
+              <button type="submit" className={twstyles.submitButton}>
                 Отправить
               </button>
             </form>

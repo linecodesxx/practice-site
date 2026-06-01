@@ -11,7 +11,7 @@ export const ProductCard = ({ product, price }: ProductCardProps) => {
 return (
     <div className={styles.productCard}>
     {/* image */}
-        <div className={styles.productImage}>meow</div>
+        <div className={styles.productImage}></div>
         
         {/* info */}
         <div className={styles.productInfo}>
