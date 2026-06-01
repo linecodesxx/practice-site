@@ -62,7 +62,9 @@ const Navbar = () => {
           </Link>
         </button>
         <button type="button" className={styles.account}>
-          <User size={20} />
+          <Link href="/profile">
+            <User size={20} />
+          </Link>
         </button>
       </div>
     </nav>
