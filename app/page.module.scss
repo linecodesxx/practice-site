@@ -3,11 +3,15 @@
   flex-direction: column;
   align-items: center;
   padding: 56px 20px;
+  background-color: var(--color-mauve-100);
 
   .title {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+    color: #1A2C3E;
   }
 
   .subtitle {
@@ -18,7 +22,7 @@
   .guideSection,
   .notifynew,
   .rules {
-    width: min(1080px, 100%);
+    width: min(1232px, 100%);
     margin-top: 32px;
     padding: 28px;
     background-color: #edf2f7;
@@ -33,13 +37,13 @@
         "buttons icon";
       align-items: center;
       width: 100%;
-      gap: 24px;
 
       .sectionTitle {
         grid-area: title;
         color: #2d3748;
         font-size: 32px;
         line-height: 1.25;
+        font-weight: 800;
       }
 
       .buttons {
@@ -115,12 +119,9 @@
   }
 
   .infoBlocks {
-    width: min(1080px, 100%);
+    width: min(1232px, 100%);
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     gap: 24px;
-    justify-content: space-between;
     margin-top: 32px;
   }
 
@@ -138,7 +139,7 @@
 
   .miniCatalog,
   .companyBlog {
-    width: min(1080px, 100%);
+    width: min(1232px, 100%);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -151,52 +152,59 @@
       font-size: 25.6px;
       padding-top: 14px;
       align-self: flex-start;
+      font-weight: 800
     }
     .products {
-      width: min(1080px, 100%);
+      width: min(1232px, 100%);
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 24px;
-      justify-content: space-between;
+      // justify-content: space-between;
     }
   }
 
   .companyBlog {
     flex-direction: column;
     .blogPosts {
-      width: min(1080px, 100%);
+      width: min(1232px, 100%);
       display: flex;
       flex-direction: row;
       gap: 24px;
     }
   }
   .feedback {
-    width: min(1080px, 100%);
+    width: min(1232px, 100%);
     display: flex;
     flex-direction: column;
+    background-color: white;
+    border-radius: 28px;
+    margin-top: 24px;
+    padding: 32px;
 
     .feedbackSectionTitle {
-      font-size: 25.6px;
+      font-size: 19px;
       padding-top: 14px;
       align-self: flex-start;
+      font-weight: 800;
+      margin-bottom: 12px;
     }
+    // .feedbackForm {
+    //   .nameEmail {
+    //     display: flex;
+    //     flex-direction: row;
+    //     gap: 12px;
 
-    .feedbackForm {
-      .nameEmail {
-        display: flex;
-        flex-direction: row;
-        gap: 12px;
-
-        .input {
-          flex: 1;
-          padding: 10px;
-          border: 1px solid #e2e8f0;
-          border-radius: 8px;
-    background-color: #f7fafc;
-        }
-      }
-    }
+    //     .input {
+    //       width: 575px;
+    //       flex: 1;
+    //       padding: 18px 12px;
+    //       border: 1px solid #e2e8f0;
+    //       border-radius: 8px;
+    //       background-color: #f7fafc;
+    //     }
+    //   }
+    // }
   }
 }
 
