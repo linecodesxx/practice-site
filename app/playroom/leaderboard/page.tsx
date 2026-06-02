@@ -7,15 +7,13 @@ export default function LeaderboardPage() {
     {
         icon: "🔥",
         title: "Самый активный",
-        subtitle: "Рейтинг по количеству выполненных
-активностей",
+        subtitle: "Рейтинг по количеству выполненных активностей",
         link: "playroom/leaderboard/active"
     },
     {
         icon: "💰",
         title: "ТОП по Бонусам",
-        subtitle: "Рейтинг по заработанной внутренней
-валюте",
+        subtitle: "Рейтинг по заработанной внутренней валюте",
         link: "playroom/leaderboard/bonus"
     },
     {
@@ -24,8 +22,6 @@ export default function LeaderboardPage() {
         subtitle: "Рейтинг побед в соревнованиях",
         link: "playroom/leaderboard/win"
     },
-    
-    
   ]
   
   return (
@@ -35,7 +31,10 @@ export default function LeaderboardPage() {
         <p className={styles.subtitle}>Выбери свою арену для соревнований!</p>
 
         <div className={styles.LeaderCardList}>
-          <LeaderCard title />
+          {LeaderTypes.map(card => (
+            <LeaderCard icon={card.icon} title={card.title} 
+            subtitle={card.subtitle} link={card.link} key={card.link} />
+          ))}
         </div>
       </main>
     </div>
