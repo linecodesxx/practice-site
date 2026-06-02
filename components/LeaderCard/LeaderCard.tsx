@@ -1,10 +1,12 @@
-import styles from "./LeaderCard.module.scss";
+import Link from 'next/link';
+import twstyles from './leadercardStyles';
 
 interface LeaderCardProps {
   icon: string;
   title: string;
   subtitle: string;
   link: string;
+  className?: string
 }
 
 export const LeaderCard = ({
@@ -14,11 +16,15 @@ export const LeaderCard = ({
   link,
 }: LeaderCardProps) => {
   return (
-    <div className={styles.container}>
-      <span className={styles.icon}>{icon}</span>
-      <h3 className={styles.title}>{title}</h3>
-      <p className={styles.subtitle}>{subtitle}</p>
-      <button className={styles.button}>Войти в рейтинг →</button>
+    <div className={twstyles.container}>
+      <div className={twstyles.wrapper}>
+        <span className={twstyles.icon}>{icon}</span>
+        <h3 className={twstyles.title}>{title}</h3>
+        <p className={twstyles.subtitle}>{subtitle}</p>
+      </div>
+      <Link href={link}>
+        <button className={twstyles.button}>Войти в рейтинг →</button>
+      </Link>
     </div>
   );
 };

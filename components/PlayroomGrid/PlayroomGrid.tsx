@@ -20,6 +20,7 @@ export default function PlayroomGrid() {
         subtitle="Выполняйте задания и зарабатывайте бонусы"
       />
       <PlayroomPage
+        link="playroom/challenges"
         image={pic2}
         title="Челленджи"
         subtitle="Участвуйте в соревнованиях"
@@ -37,11 +38,13 @@ export default function PlayroomGrid() {
         subtitle="Смотрите рейтинги"
       />
       <PlayroomPage
+        link="playroom/poll"
         image={pic5}
         title="Опросники"
         subtitle="Зарабатывайте за опросы"
       />
       <PlayroomPage
+        link="playroom/employees"
         image={pic6}
         title="Сотрудники"
         subtitle="Смотрите профили коллег"
