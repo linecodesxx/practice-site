@@ -31,6 +31,7 @@ export default function PlayroomGrid() {
         subtitle="Испытайте удачу"
       />
       <PlayroomPage
+        link="playroom/leaderboard"
         image={pic4}
         title="Лидерборды"
         subtitle="Смотрите рейтинги"
