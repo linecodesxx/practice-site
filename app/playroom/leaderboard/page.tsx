@@ -1,5 +1,7 @@
 import { LeaderCard } from "@/components/LeaderCard/LeaderCard";
 import styles from "./page.module.scss";
+import twstyles from "./leaderboardStyles";
+import TopBoard from "@/components/TOPboard/TopBoard";
 
 export default function LeaderboardPage() {
   
@@ -25,18 +27,18 @@ export default function LeaderboardPage() {
   ]
   
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>📊 ЛИДЕРБОРДЫ</h1>
-        <p className={styles.subtitle}>Выбери свою арену для соревнований!</p>
-
-        <div className={styles.LeaderCardList}>
+    <main className={twstyles.main}>
+      <h1 className={twstyles.title}>📊 ЛИДЕРБОРДЫ</h1>
+      <p className={twstyles.subtitle}>Выбери свою арену для соревнований!</p>
+      <section className={twstyles.section}>
+        <div className={twstyles.LeaderCardList}>
           {LeaderTypes.map(card => (
             <LeaderCard icon={card.icon} title={card.title} 
             subtitle={card.subtitle} link={card.link} key={card.link} />
           ))}
         </div>
-      </main>
-    </div>
+        <TopBoard />
+      </section>
+    </main>
   );
 }
