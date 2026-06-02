@@ -14,6 +14,7 @@ export default function PlayroomGrid() {
   return (
     <section className={twstyles.section}>
       <PlayroomPage
+        link="playroom/birja-zadach"
         image={pic1}
         title="Биржа задач"
         subtitle="Выполняйте задания и зарабатывайте бонусы"
