@@ -44,6 +44,7 @@ export default function PlayroomGrid() {
         subtitle="Зарабатывайте за опросы"
       />
       <PlayroomPage
+        link="playroom/employees"
         image={pic6}
         title="Сотрудники"
         subtitle="Смотрите профили коллег"
