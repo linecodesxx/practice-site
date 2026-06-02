@@ -20,6 +20,7 @@ export default function PlayroomGrid() {
         subtitle="Выполняйте задания и зарабатывайте бонусы"
       />
       <PlayroomPage
+        link="playroom/challenges"
         image={pic2}
         title="Челленджи"
         subtitle="Участвуйте в соревнованиях"
