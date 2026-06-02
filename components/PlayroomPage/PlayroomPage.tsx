@@ -1,8 +1,8 @@
 import twstyles from "./playpageStyles";
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 export default function PlayroomPage({ image , title, subtitle }: 
-    { image: StaticImageData, title: string, subtitle: string }) {
+    { image: string, title: string, subtitle: string }) {
 
     return (
         <div className={twstyles.playcard}>

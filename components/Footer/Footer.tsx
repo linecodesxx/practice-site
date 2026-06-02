@@ -1,7 +1,6 @@
 import FooterNav from "../FooterNav/FooterNav";
 import twstyles from "./footerStyles";
 import Image from "next/image";
-import logo from '../../app/assets/logo.png'
 
 
 export default function Footer() {
@@ -9,7 +8,7 @@ export default function Footer() {
         <footer className={twstyles.footer}>
             <div className={twstyles.wrapper}>
                 <div className={twstyles.top}>
-                    <Image src={logo} alt="logo" width={75} height={75} />
+                    <Image src="/assets/logo.png" alt="logo" width={75} height={75} />
                     <FooterNav />
                     <div className={twstyles.contacts}>
                         <h3 className={twstyles.contactTitle}>Контакты</h3>

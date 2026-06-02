@@ -1,13 +1,14 @@
 import twstyles from './playgridStyle';
 import PlayroomPage from '../PlayroomPage/PlayroomPage';
-import pic1 from '../../app/assets/Property 1=Default.png';
-import pic2 from '../../app/assets/Property 1=Челленджи.png';
-import pic3 from '../../app/assets/Property 1=Колесо Фортуны.png';
-import pic4 from '../../app/assets/Property 1=Лидерборды.png';
-import pic5 from '../../app/assets/Property 1=Опросники.png';
-import pic6 from '../../app/assets/Property 1=Сотрудники.png';
-import pic7 from '../../app/assets/Property 1=Pomodoro Таймер.png';
-import pic8 from '../../app/assets/Property 1=Аукционы.png';
+
+const pic1 = '/assets/Property 1=Default.png';
+const pic2 = '/assets/Property 1=Челленджи.png';
+const pic3 = '/assets/Property 1=Колесо Фортуны.png';
+const pic4 = '/assets/Property 1=Лидерборды.png';
+const pic5 = '/assets/Property 1=Опросники.png';
+const pic6 = '/assets/Property 1=Сотрудники.png';
+const pic7 = '/assets/Property 1=Pomodoro Таймер.png';
+const pic8 = '/assets/Property 1=Аукционы.png';
 
 export default function PlayroomGrid() {
     return (
