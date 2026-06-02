@@ -1,26 +1,59 @@
-import twstyles from './playgridStyle';
-import PlayroomPage from '../PlayroomPage/PlayroomPage';
+import twstyles from "./playgridStyle";
+import PlayroomPage from "../PlayroomPage/PlayroomPage";
 
-const pic1 = '/assets/Property 1=Default.png';
-const pic2 = '/assets/Property 1=Челленджи.png';
-const pic3 = '/assets/Property 1=Колесо Фортуны.png';
-const pic4 = '/assets/Property 1=Лидерборды.png';
-const pic5 = '/assets/Property 1=Опросники.png';
-const pic6 = '/assets/Property 1=Сотрудники.png';
-const pic7 = '/assets/Property 1=Pomodoro Таймер.png';
-const pic8 = '/assets/Property 1=Аукционы.png';
+const pic1 = "/assets/Property 1=Default.png";
+const pic2 = "/assets/Property 1=Челленджи.png";
+const pic3 = "/assets/Property 1=Колесо Фортуны.png";
+const pic4 = "/assets/Property 1=Лидерборды.png";
+const pic5 = "/assets/Property 1=Опросники.png";
+const pic6 = "/assets/Property 1=Сотрудники.png";
+const pic7 = "/assets/Property 1=Pomodoro Таймер.png";
+const pic8 = "/assets/Property 1=Аукционы.png";
 
 export default function PlayroomGrid() {
-    return (
-        <section className={twstyles.section}>
-            <PlayroomPage image={pic1} title="Биржа задач" subtitle="Выполняйте задания и зарабатывайте бонусы"/>
-            <PlayroomPage image={pic2} title="Челленджи" subtitle="Участвуйте в соревнованиях"/>
-            <PlayroomPage image={pic3} title="Колесо Фортуны" subtitle="Испытайте удачу"/>
-            <PlayroomPage image={pic4} title="Лидерборды" subtitle="Смотрите рейтинги"/>
-            <PlayroomPage image={pic5} title="Опросники" subtitle="Зарабатывайте за опросы"/>
-            <PlayroomPage image={pic6} title="Сотрудники" subtitle="Смотрите профили коллег"/>
-            <PlayroomPage image={pic7} title="Pomodoro Таймер" subtitle="Работайте продуктивно и без стресса"/>
-            <PlayroomPage image={pic8} title="Аукционы" subtitle="Последнее слово за вами"/>
-      </section>
-    )
+  return (
+    <section className={twstyles.section}>
+      <PlayroomPage
+        image={pic1}
+        title="Биржа задач"
+        subtitle="Выполняйте задания и зарабатывайте бонусы"
+      />
+      <PlayroomPage
+        image={pic2}
+        title="Челленджи"
+        subtitle="Участвуйте в соревнованиях"
+      />
+      <PlayroomPage
+        link="playroom/fortune-wheel"
+        image={pic3}
+        title="Колесо Фортуны"
+        subtitle="Испытайте удачу"
+      />
+      <PlayroomPage
+        image={pic4}
+        title="Лидерборды"
+        subtitle="Смотрите рейтинги"
+      />
+      <PlayroomPage
+        image={pic5}
+        title="Опросники"
+        subtitle="Зарабатывайте за опросы"
+      />
+      <PlayroomPage
+        image={pic6}
+        title="Сотрудники"
+        subtitle="Смотрите профили коллег"
+      />
+      <PlayroomPage
+        image={pic7}
+        title="Pomodoro Таймер"
+        subtitle="Работайте продуктивно и без стресса"
+      />
+      <PlayroomPage
+        image={pic8}
+        title="Аукционы"
+        subtitle="Последнее слово за вами"
+      />
+    </section>
+  );
 }
