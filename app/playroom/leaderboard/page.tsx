@@ -1,5 +1,4 @@
 import { LeaderCard } from "@/components/LeaderCard/LeaderCard";
-import styles from "./page.module.scss";
 import twstyles from "./leaderboardStyles";
 import TopBoard from "@/components/TOPboard/TopBoard";
 

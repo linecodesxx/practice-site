@@ -37,6 +37,7 @@ export default function PlayroomGrid() {
         subtitle="Смотрите рейтинги"
       />
       <PlayroomPage
+        link="playroom/poll"
         image={pic5}
         title="Опросники"
         subtitle="Зарабатывайте за опросы"

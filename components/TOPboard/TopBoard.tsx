@@ -79,7 +79,7 @@ export default function TopBoard() {
                     </div>
                 </div>
                 {TopboardProps.map(item => (
-                    <div className={twstyles.wrapper}>
+                    <div key={item.id} className={twstyles.wrapper}>
                         <p className={placeHandler(count)}>{`${count++}`}</p>
                         <div className={twstyles.unit}>
                             <div className={twstyles.idContainer}>
