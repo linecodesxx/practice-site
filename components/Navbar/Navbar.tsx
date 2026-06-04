@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Search, ShoppingCart, User, X } from "lucide-react";
+import { Astroid, Search, ShoppingCart, User, X } from "lucide-react";
 import styles from "./Navbar.module.scss";
 import twstyles from "./navbarStyles";
 import { useState } from 'react';
@@ -64,6 +64,11 @@ const Navbar = () => {
         </label>
         <button type="button" className={styles.action}>
           Log in
+        </button>
+        <button type="button" className={styles.account}>
+          <Link href="/quests"> 
+            <Astroid size={20}/>
+          </Link>
         </button>
         <button type="button" className={styles.account}>
           <Link href="/cart">

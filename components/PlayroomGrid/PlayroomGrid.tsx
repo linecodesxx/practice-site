@@ -50,11 +50,13 @@ export default function PlayroomGrid() {
         subtitle="Смотрите профили коллег"
       />
       <PlayroomPage
+        link=""
         image={pic7}
         title="Pomodoro Таймер"
         subtitle="Работайте продуктивно и без стресса"
       />
       <PlayroomPage
+        link="playroom/auctions"
         image={pic8}
         title="Аукционы"
         subtitle="Последнее слово за вами"
