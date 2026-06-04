@@ -1,63 +1,161 @@
 .page {
-    .main {
-        .title {
-            text-align: center;
-            padding: 10px;
-            text-transform: uppercase;
-            font-size: 32px;
-            font-weight: bold;
-            color: #1a2c3e;
-            margin-top: 20px;
-        }
-        .subtitle {
-            text-align: center;
-            color: #718096;
-            margin-bottom: 50px;
-        }
-        .employessec {
-            display: flex;
-            flex-direction: column;
-            width: min(1232px, 100%);
-            margin: 0 auto;
-            padding: 36px;
-            .searchblock {
-                display: flex;
-                gap:10px;
-                .searchinput{
-                    width: 1090px;
-                    height: 40px;
-                    border: 1px solid #E2E8F0;
-                    border-radius: 40px;
-                    background-color: #F7FAFC;
-                    font-size: 13px;
-                    padding:11px 18px ;
-                    margin-bottom: 20px;
-                }
-                .department{
-                    width: 130px;
-                    height: 40px;
-                    background-color: #F7FAFC;
-                    color: black;
-                    font-size: 13px;
-                    border: 1px solid #E2E8F0;
-                    border-radius: 40px;
-                    padding: 10px;
-                }
-            }
-            .employesList {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 24px;
-                width: 100%;
-
-                & > * {
-                    flex: 1 1 calc(33.333% - 16px);
-                    min-width: 300px;
-                }
-            }
-            .link {
-                text-decoration: none;
-            }
-        }
+    padding: 60px 0;
+  .main {
+    .title {
+      text-align: center;
+      padding: 10px;
+      text-transform: uppercase;
+      font-size: 32px;
+      font-weight: bold;
+      color: #1a2c3e;
+      margin-top: 20px;
     }
+
+    .subtitle {
+      text-align: center;
+      color: #718096;
+      margin-bottom: 50px;
+    }
+
+    .employessec {
+      display: flex;
+      flex-direction: column;
+      width: min(1232px, 100%);
+      margin: 0 auto;
+      padding: 36px;
+
+      .searchblock {
+        display: flex;
+        gap: 10px;
+
+        .searchinput {
+          width: 1090px;
+          height: 40px;
+          border: 1px solid #E2E8F0;
+          border-radius: 40px;
+          background-color: #F7FAFC;
+          font-size: 13px;
+          padding: 11px 18px;
+          margin-bottom: 20px;
+        }
+
+        .department {
+          width: 130px;
+          height: 40px;
+          background-color: #F7FAFC;
+          color: black;
+          font-size: 13px;
+          border: 1px solid #E2E8F0;
+          border-radius: 40px;
+          padding: 10px;
+        }
+      }
+
+      .employesList {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        width: 100%;
+
+        & > * {
+          flex: 1 1 calc(33.333% - 16px);
+          min-width: 300px;
+        }
+      }
+
+      .link {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    .main {
+      .title {
+        font-size: 24px;
+        padding: 8px;
+        margin-top: 16px;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        margin-bottom: 32px;
+        padding: 0 16px;
+      }
+
+      .employessec {
+        padding: 20px;
+
+        .searchblock {
+          flex-direction: column;
+          gap: 8px;
+
+          .searchinput {
+            width: 100%;
+            height: 40px;
+            font-size: 12px;
+            padding: 10px 16px;
+            margin-bottom: 12px;
+          }
+
+          .department {
+            width: 100%;
+            height: 40px;
+            font-size: 12px;
+            margin-bottom: 12px;
+          }
+        }
+
+        .employesList {
+          gap: 16px;
+
+          & > * {
+            flex: 1 1 100%;
+            min-width: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    .main {
+      .title {
+        font-size: 20px;
+      }
+
+      .subtitle {
+        font-size: 13px;
+        margin-bottom: 24px;
+        padding: 0 12px;
+      }
+
+      .employessec {
+        padding: 16px;
+
+        .searchblock {
+          gap: 6px;
+
+          .searchinput {
+            font-size: 11px;
+            padding: 8px 14px;
+            height: 36px;
+          }
+
+          .department {
+            font-size: 11px;
+            height: 36px;
+          }
+        }
+
+        .employesList {
+          gap: 12px;
+        }
+      }
+    }
+  }
 }

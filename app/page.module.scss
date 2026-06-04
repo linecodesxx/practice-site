@@ -101,6 +101,7 @@
         justify-content: center;
       }
     }
+    
     .guidedFlex {
       display: flex;
       flex-direction: row;
@@ -121,6 +122,7 @@
   .infoBlocks {
     width: min(1232px, 100%);
     display: flex;
+    flex-direction: row;
     gap: 24px;
     margin-top: 32px;
   }
@@ -155,18 +157,19 @@
       align-self: flex-start;
       font-weight: 800;
     }
+    
     .products {
       width: min(1232px, 100%);
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 24px;
-      // justify-content: space-between;
     }
   }
 
   .companyBlog {
     flex-direction: column;
+    
     .blogPosts {
       width: min(1232px, 100%);
       display: flex;
@@ -174,6 +177,7 @@
       gap: 24px;
     }
   }
+
   .feedback {
     width: min(1232px, 100%);
     display: flex;
@@ -190,31 +194,28 @@
       font-weight: 800;
       margin-bottom: 12px;
     }
-    // .feedbackForm {
-    //   .nameEmail {
-    //     display: flex;
-    //     flex-direction: row;
-    //     gap: 12px;
-
-    //     .input {
-    //       width: 575px;
-    //       flex: 1;
-    //       padding: 18px 12px;
-    //       border: 1px solid #e2e8f0;
-    //       border-radius: 8px;
-    //       background-color: #f7fafc;
-    //     }
-    //   }
-    // }
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 768px) {
   .main {
-    padding: 40px 16px;
+    padding: 32px 16px;
 
-    .guideSection {
-      padding: 22px;
+    .title {
+      font-size: 24px;
+      padding: 8px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+    }
+
+    .guideSection,
+    .notifynew,
+    .rules {
+      margin-top: 24px;
+      padding: 20px;
+      border-radius: 12px;
 
       .guideContainer {
         grid-template-columns: 1fr;
@@ -224,16 +225,130 @@
           "buttons";
         justify-items: center;
         text-align: center;
+        gap: 16px;
+
+        .sectionTitle {
+          font-size: 24px;
+        }
 
         .buttons {
           width: 100%;
+          flex-direction: column;
 
           .buttonPlayroom,
           .buttonBirja {
             width: 100%;
           }
         }
+
+        .guideIcon {
+          width: 120px;
+          height: 100px;
+          padding: 8px;
+        }
       }
+
+      .guidedFlex {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+
+    .infoBlocks {
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .rules {
+      .rulesTitle {
+        font-size: 17px;
+      }
+
+      .rulesText {
+        font-size: 13px;
+      }
+    }
+
+    .miniCatalog,
+    .companyBlog {
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 16px;
+
+      .catalogSectionTitle,
+      .blogSectionTitle {
+        font-size: 20px;
+        padding-top: 8px;
+        text-align: center;
+        align-self: center;
+      }
+
+      .products {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+
+    .companyBlog {
+      .blogPosts {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+
+    .feedback {
+      margin-top: 16px;
+      padding: 20px;
+      border-radius: 20px;
+
+      .feedbackSectionTitle {
+        font-size: 17px;
+        padding-top: 8px;
+        text-align: center;
+        align-self: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .main {
+    padding: 24px 12px;
+
+    .title {
+      font-size: 20px;
+    }
+
+    .guideSection,
+    .notifynew,
+    .rules {
+      padding: 16px;
+
+      .guideContainer {
+        gap: 12px;
+
+        .sectionTitle {
+          font-size: 20px;
+        }
+
+        .guideIcon {
+          width: 100px;
+          height: 80px;
+        }
+      }
+    }
+
+    .miniCatalog,
+    .companyBlog {
+      .catalogSectionTitle,
+      .blogSectionTitle {
+        font-size: 18px;
+      }
+    }
+
+    .feedback {
+      padding: 16px;
     }
   }
 }

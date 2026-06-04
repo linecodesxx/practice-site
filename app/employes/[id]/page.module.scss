@@ -1,138 +1,334 @@
 .page {
-    .main {
-        .title {
-            text-align: center;
-            padding: 10px;
-            text-transform: uppercase;
-            font-size: 32px;
+  .main {
+    .title {
+      text-align: center;
+      padding: 10px;
+      text-transform: uppercase;
+      font-size: 32px;
+      font-weight: bold;
+      color: #1a2c3e;
+      margin-top: 20px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #718096;
+      margin-bottom: 50px;
+    }
+
+    .userinfo {
+      display: flex;
+      width: min(1232px, 100%);
+      margin: 0 auto;
+      padding: 36px;
+      flex-direction: column;
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 32px;
+      margin-bottom: 70px;
+
+      .namesec {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #e2e8f0;
+
+        .avatar {
+          font-size: 64px;
+        }
+
+        .nameandbirth {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          .name {
+            font-size: 24px;
             font-weight: bold;
             color: #1a2c3e;
-            margin-top:20px
-        }
-        .subtitle {
-            text-align: center;
+          }
+
+          .birthday {
+            font-size: 16px;
             color: #718096;
-            margin-bottom:50px;
+          }
+
+          .giftbadge {
+            margin-top: 8px;
+            border: 1px solid #4a5568;
+            border-radius: 40px;
+            padding: 9px 23px;
+            font-size: 14.4px;
+            font-weight: bold;
+            background: transparent;
+            cursor: pointer;
+            width: fit-content;
+          }
+        }
+      }
+
+      .aboutsec {
+        display: flex;
+        flex-direction: column;
+        padding: 24px 0;
+        border-bottom: 1px solid #e2e8f0;
+
+        .aboutTitle {
+          font-size: 19px;
+          font-weight: bold;
+          color: #1a2c3e;
+          margin-bottom: 8px;
         }
 
-        .userinfo {
-            display: flex;
-            width: min(1232px, 100%);
-            margin: 0 auto;
-            padding: 36px;
-            flex-direction: column;
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 32px;
-            margin-bottom: 70px;
-            .namesec {
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                padding-bottom: 24px;
-                border-bottom: 1px solid #e2e8f0;
-
-                .avatar {
-                    font-size: 64px;
-                }
-                .nameandbirth {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 4px;
-
-                    .name {
-                        font-size: 24px;
-                        font-weight: bold;
-                        color: #1a2c3e;
-                    }
-                    .birthday {
-                        font-size: 16px;
-                        color: #718096;
-                    }
-                    .giftbadge {
-                        margin-top: 8px;
-                        border: 1px solid #4a5568;
-                        border-radius: 40px;
-                        padding: 9px 23px;
-                        font-size: 14.4px;
-                        font-weight: bold;
-                        background: transparent;
-                        cursor: pointer;
-                        width: fit-content;
-                    }
-                }
-            }
-
-            .aboutsec {
-                display: flex;
-                flex-direction: column;
-                padding: 24px 0;
-                border-bottom: 1px solid #e2e8f0;
-
-                .aboutTitle {
-                    font-size: 19px;
-                    font-weight: bold;
-                    color: #1a2c3e;
-                    margin-bottom: 8px;
-                }
-                .aboutText {
-                    font-size: 16px;
-                    color: #1a2c3e;
-                }
-            }
-
-            .badgesec {
-                display: flex;
-                flex-direction: column;
-                padding: 24px 0;
-                border-bottom: 1px solid #e2e8f0;
-
-                .titlecount {
-                    display: flex;
-                    gap: 8px;
-                    margin-bottom: 16px;
-
-                    .badgeTitle,
-                    .badgeCount {
-                        font-size: 17.6px;
-                        color: #1a2c3e;
-                    }
-                    .badgeTitle {
-                        font-weight: bold;
-                    }
-                }
-                
-                .filterButtons {
-                    display: flex;
-                    gap: 10px;
-                    margin-bottom: 16px;
-
-                    .button_filter {
-                        border: none;
-                        border-radius: 30px;
-                        background-color: #EDF2F7;
-                        padding: 5px 14px;
-                        font-size: 13px;
-                        cursor: pointer;
-                    }
-                }
-                
-                .badgeList {
-                    display: flex;
-                    gap: 16px;
-                }
-            }
-
-            .lastActivitysec {
-                padding: 24px 0 0 0;
-
-                .lastActivityTitle {
-                    font-size: 19px;
-                    font-weight: bold;
-                    color: #1a2c3e;
-                    margin-bottom: 16px;
-                }
-            }
+        .aboutText {
+          font-size: 16px;
+          color: #1a2c3e;
         }
+      }
+
+      .badgesec {
+        display: flex;
+        flex-direction: column;
+        padding: 24px 0;
+        border-bottom: 1px solid #e2e8f0;
+
+        .titlecount {
+          display: flex;
+          gap: 8px;
+          margin-bottom: 16px;
+
+          .badgeTitle,
+          .badgeCount {
+            font-size: 17.6px;
+            color: #1a2c3e;
+          }
+
+          .badgeTitle {
+            font-weight: bold;
+          }
+        }
+
+        .filterButtons {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 16px;
+
+          .button_filter {
+            border: none;
+            border-radius: 30px;
+            background-color: #EDF2F7;
+            padding: 5px 14px;
+            font-size: 13px;
+            cursor: pointer;
+          }
+        }
+
+        .badgeList {
+          display: flex;
+          gap: 16px;
+        }
+      }
+
+      .lastActivitysec {
+        padding: 24px 0 0 0;
+
+        .lastActivityTitle {
+          font-size: 19px;
+          font-weight: bold;
+          color: #1a2c3e;
+          margin-bottom: 16px;
+        }
+      }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    .main {
+      .title {
+        font-size: 24px;
+        padding: 8px;
+        margin-top: 16px;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        margin-bottom: 32px;
+        padding: 0 16px;
+      }
+
+      .userinfo {
+        padding: 20px;
+        border-radius: 24px;
+        margin-bottom: 40px;
+
+        .namesec {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+          padding-bottom: 20px;
+
+          .avatar {
+            font-size: 48px;
+          }
+
+          .nameandbirth {
+            .name {
+              font-size: 20px;
+            }
+
+            .birthday {
+              font-size: 14px;
+            }
+
+            .giftbadge {
+              padding: 8px 18px;
+              font-size: 13px;
+            }
+          }
+        }
+
+        .aboutsec {
+          padding: 20px 0;
+
+          .aboutTitle {
+            font-size: 17px;
+          }
+
+          .aboutText {
+            font-size: 14px;
+          }
+        }
+
+        .badgesec {
+          padding: 20px 0;
+
+          .titlecount {
+            margin-bottom: 12px;
+
+            .badgeTitle,
+            .badgeCount {
+              font-size: 16px;
+            }
+          }
+
+          .filterButtons {
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+
+            .button_filter {
+              padding: 5px 12px;
+              font-size: 12px;
+            }
+          }
+
+          .badgeList {
+            flex-wrap: wrap;
+            gap: 12px;
+          }
+        }
+
+        .lastActivitysec {
+          padding: 20px 0 0 0;
+
+          .lastActivityTitle {
+            font-size: 17px;
+            margin-bottom: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    .main {
+        padding: 0 10px;
+      .title {
+        font-size: 20px;
+      }
+
+      .subtitle {
+        font-size: 13px;
+        margin-bottom: 24px;
+        padding: 0 12px;
+      }
+
+      .userinfo {
+        padding: 16px;
+        border-radius: 20px;
+        margin-bottom: 32px;
+
+        .namesec {
+          gap: 10px;
+          padding-bottom: 16px;
+
+          .avatar {
+            font-size: 40px;
+          }
+
+          .nameandbirth {
+            .name {
+              font-size: 18px;
+            }
+
+            .birthday {
+              font-size: 13px;
+            }
+
+            .giftbadge {
+              padding: 6px 16px;
+              font-size: 12px;
+            }
+          }
+        }
+
+        .aboutsec {
+          padding: 16px 0;
+
+          .aboutTitle {
+            font-size: 16px;
+          }
+
+          .aboutText {
+            font-size: 13px;
+          }
+        }
+
+        .badgesec {
+          padding: 16px 0;
+
+          .titlecount {
+            .badgeTitle,
+            .badgeCount {
+              font-size: 15px;
+            }
+          }
+
+          .filterButtons {
+            .button_filter {
+              padding: 4px 10px;
+              font-size: 11px;
+            }
+          }
+
+          .badgeList {
+            gap: 10px;
+          }
+        }
+
+        .lastActivitysec {
+          padding: 16px 0 0 0;
+
+          .lastActivityTitle {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
 }

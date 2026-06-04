@@ -1,82 +1,201 @@
 .employer_card {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #ffffff;
+  height: 180px;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .namesec {
     display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    background-color: #ffffff;
-    height: 180px;
-    border-radius: 24px;
-    border: 1px solid #e2e8f0;
-    transition: box-shadow 0.3s ease;
-    margin-bottom: 10px;
-    &:hover {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    align-items: flex-start;
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+
+    .avatar {
+      font-size: 48px;
+      padding-top: 10px;
+      padding-left: 4px;
+      flex-shrink: 0;
     }
+
+    .nameandjob {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-left: 12px;
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+
+      .name {
+        font-size: 16px;
+        font-weight: 800;
+        color: #1a2c3e;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .job {
+        font-size: 13px;
+        color: #718096;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .department {
+        font-size: 13px;
+        color: #1a2c3e;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 4px;
+
+        .badgeCount {
+          background-color: #edf2f7;
+          padding: 4px 10px;
+          border-radius: 16px;
+          font-size: 11px;
+          color: #1a2c3e;
+          white-space: nowrap;
+        }
+
+        .viewProfile {
+          background-color: #edf2f7;
+          padding: 4px 14px;
+          border-radius: 16px;
+          font-size: 13px;
+          color: #718096;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          margin-top: 4px;
+          margin-bottom: 4px;
+          white-space: nowrap;
+
+          &:hover {
+            background-color: #d1d5db;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .employer_card {
+    height: auto;
+    padding: 16px;
+    border-radius: 20px;
+    width: 100%;
+    margin: 0 0 10px 0;
 
     .namesec {
-        display: flex;
-        align-items: flex-start;
-        gap: 14px;
+      gap: 10px;
 
-        .avatar {
-            font-size: 48px;
-            padding-top: 10px;
-            padding-left: 4px;
+      .avatar {
+        font-size: 40px;
+        padding-top: 6px;
+        padding-left: 2px;
+      }
+
+      .nameandjob {
+        gap: 3px;
+        padding-left: 8px;
+
+        .name {
+          font-size: 15px;
         }
 
-        .nameandjob {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            // border-left: 1px solid #e2e8f0;
-            padding-left: 12px;
-
-            .name {
-                font-size: 16px;
-                font-weight: 800;
-                color: #1a2c3e;
-            }
-
-            .job {
-                font-size: 13px;
-                color: #718096;
-            }
-
-            .department {
-                font-size: 13px;
-                color: #1a2c3e;
-            }
-
-            .info {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 8px;
-                margin-top: 4px;
-
-                .badgeCount {
-                    background-color: #edf2f7;
-                    padding: 4px 10px;
-                    border-radius: 16px;
-                    font-size: 11px;
-                    color: #1a2c3e;
-                }
-
-                .viewProfile {
-                    background-color: #edf2f7;
-                    padding: 4px 14px;
-                    border-radius: 16px;
-                    font-size: 13px;
-                    color: #718096;
-                    cursor: pointer;
-                    transition: background-color 0.3s ease;
-                    margin-top: 4px;
-                    margin-bottom: 4px;
-                    
-
-                    &:hover {
-                        background-color: #d1d5db;
-                    }
-                }
-            }
+        .job {
+          font-size: 12px;
         }
+
+        .department {
+          font-size: 12px;
+        }
+
+        .info {
+          gap: 6px;
+          margin-top: 6px;
+
+          .badgeCount {
+            padding: 4px 8px;
+            font-size: 10px;
+          }
+
+          .viewProfile {
+            padding: 4px 12px;
+            font-size: 12px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+          }
+        }
+      }
     }
+  }
+}
+
+@media (max-width: 520px) {
+  .employer_card {
+    padding: 14px;
+    border-radius: 16px;
+    margin: 0px 10px;
+
+    .namesec {
+      gap: 8px;
+
+      .avatar {
+        font-size: 36px;
+        padding-top: 4px;
+      }
+
+      .nameandjob {
+        padding-left: 6px;
+
+        .name {
+          font-size: 14px;
+        }
+
+        .job {
+          font-size: 11px;
+        }
+
+        .department {
+          font-size: 11px;
+        }
+
+        .info {
+          gap: 4px;
+
+          .badgeCount {
+            padding: 3px 8px;
+            font-size: 10px;
+          }
+
+          .viewProfile {
+            padding: 3px 10px;
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
 }
