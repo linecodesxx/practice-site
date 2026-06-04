@@ -1,25 +1,15 @@
+"use client"
+
 import { Info } from 'lucide-react';
 import twstyles from './twcart';
 import CartOrder from '@/components/CartOrder/CartOrder';
 import CartList from '@/components/CartList/CartList';
-
-export interface ItemType {
-    name: string,
-    id: string,
-    price: number,
-    quantity: number
-}
-
-const items: ItemType[] = [
-    {
-        id: 'asf1123f',
-        name: 'Отпуск',
-        price: 10000,
-        quantity: 1,
-    }
-]
+import useCartStore from '@/stores/cartStore';
 
 export default function Cart() {
+    const { items } = useCartStore();
+
+
     if (items.length <= 0) {
         return (
             <main className={twstyles.plug}>
@@ -39,8 +29,8 @@ export default function Cart() {
             </p>
             <section className={twstyles.section}>
                 <div className={twstyles.wrapper}>
-                    <CartList items={items}/>
-                    <CartOrder items={items}/>
+                    <CartList />
+                    <CartOrder />
                 </div>
                 <div className={twstyles.cartafter}>
                     <Info/>
