@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 19px;
+    font-weight: bold;
+    color: #1a2c3e;
+    margin-bottom: 16px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    padding: 16px 0;
+    border-bottom: 1px solid #e2e8f0;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.check {
+    font-size: 18px;
+    color: #27ae60;
+}
+
+.activityTitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1a2c3e;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #718096;
+    margin: 0;
+    padding-left: 28px;
+}
