@@ -3,7 +3,7 @@ const twstyles = {
     title: "uppercase text-2xl md:text-3xl font-bold !mb-[6px] md:!mb-[8px] text-center",
     subtitle: "text-mauve-400 !mb-[32px] md:!mb-[48px] text-sm md:text-base text-center",
     section: "w-full !px-5 md:w-[1232px] flex flex-col gap-6 md:gap-10",
-    searchBar: "flex flex-col sm:flex-row w-full gap-[10px] md:gap-[14px] items-stretch sm:items-center",
+    searchBar: "!mb-10 flex flex-col sm:flex-row w-full gap-[10px] md:gap-[14px] items-stretch sm:items-cente",
     input: "bg-[#F7FAFC] w-full !px-[18px] md:!px-[24px] !py-[10px] text-[14px] md:text-[16px] rounded-3xl border-1 border-gray-200 focus:!outline-none",
     searchBtn: "w-full sm:w-[130px] !py-[10px] !px-[18px] border-1 border-gray-200 rounded-3xl bg-[#F7FAFC] text-gray-400 text-[14px] md:text-[15px] cursor-pointer duration-300 hover:bg-gray-200 hover:text-[#1A2C3E] text-center",
     grid: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[16px] md:gap-[24px] w-full",

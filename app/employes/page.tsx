@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Employer } from "@/components/Employer/Employer";
 import styles from "./page.module.scss";
+import twstyles from '@/app/playroom/employees/employeesStyle';
 
 const MockEmployers = [
     {
@@ -64,16 +65,16 @@ export default function EmployesPage() {
                     Смотрите профили коллег, их достижения и бейджи
                 </p>
                 <section className={styles.employessec}>
-                    <div className={styles.searchblock}>
+                    <div className={twstyles.searchBar}>
                         <input
-                            className={styles.searchinput}
+                            className={twstyles.input}
                             type="text"
                             placeholder="Поиск сотрудника..."
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
                         />
                         <button
-                            className={styles.department}
+                            className={twstyles.searchBtn}
                             onClick={() => setSearch("")}
                         >
                             Все отделы
