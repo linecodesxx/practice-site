@@ -1,133 +1,273 @@
 .page {
-    .main {
-        background-color: var(--color-mauve-100);
-        padding: 64px 0;
-        .title {
-            text-align: center;
-            padding: 10px;
-            text-transform: uppercase;
-            font-size: 32px;
-            font-weight: bold;
-            color: #1a2c3e;
-        }
-        .subtitle {
-            text-align: center;
-            color: #718096;
-            margin-bottom: 48px;
-        }
+  .main {
+    background-color: var(--color-mauve-100);
+    padding: 64px 0;
 
-        .adminMenu {
-            width: min(1232px, 100%);
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 24px;
-            justify-content: center;
-            margin: 12px auto 0;
-        }
-
-        .shopAdmin {
-            width: min(1232px, 100%);
-            margin: 32px auto 0;
-            background: transparent;
-        }
-
-        .shopHeader {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .titleShop {
-            font-size: 24px;
-            font-weight: 800;
-            color: #1a2c3e;
-            margin: 0;
-        }
-
-        .buttonShop {
-            background: #4A5568;
-            color: #fff;
-            border: none;
-            border-radius: 40px;
-            padding: 10px 24px;
-            font-size: 14px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: background 0.2s;
-
-            &:hover {
-                background: #1f2937;
-            }
-        }
-
-        .tableWrapper {
-            overflow-x: auto;
-            border: 1px solid #E2E8F0;
-            border-radius: 24px;
-            margin-bottom: 20px;
-        }
-
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color:#FFFFFF;
-        }
-
-        .thName,
-        .thActions {
-            background: #e8edf2;
-            padding: 12px 16px;
-            text-align: left;
-            font-size: 14px;
-            font-weight: 600;
-            color: #1a2c3e;
-            border-bottom: 1px solid #dde3ea;
-        }
-
-        .thActions {
-            padding-left: 40px;
-        }
-
-        .tdName,
-        .tdActions {
-            padding: 14px 16px;
-            font-size: 16px;
-            color: #374151;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .tdActions {
-            display: flex;
-            gap: 12px;
-            padding-left: 40px;
-        }
-
-        .btnEdit,
-        .btnDelete {
-            border: none;
-            border-radius: 30px;
-            padding: 6px 16px;
-            font-size: 13px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: opacity 0.2s;
-
-            &:hover {
-                opacity: 0.8;
-            }
-        }
-
-        .btnEdit {
-            background: #e5e7eb;
-            color: #374151;
-        }
-
-        .btnDelete {
-            background: #fef3e2;
-            color: #d97706;
-        }
+    .title {
+      text-align: center;
+      padding: 10px;
+      text-transform: uppercase;
+      font-size: 32px;
+      font-weight: bold;
+      color: #1a2c3e;
     }
+
+    .subtitle {
+      text-align: center;
+      color: #718096;
+      margin-bottom: 48px;
+    }
+
+    .adminMenu {
+      width: min(1232px, 100%);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      margin: 12px auto 0;
+      padding: 0 16px;
+    }
+
+    .shopAdmin {
+      width: min(1232px, 100%);
+      margin: 32px auto 0;
+      background: transparent;
+      padding: 0 16px;
+    }
+
+    .shopHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .titleShop {
+      font-size: 24px;
+      font-weight: 800;
+      color: #1a2c3e;
+      margin: 0;
+    }
+
+    .buttonShop {
+      background: #4A5568;
+      color: #fff;
+      border: none;
+      border-radius: 40px;
+      padding: 10px 24px;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #1f2937;
+      }
+    }
+
+    .tableWrapper {
+      overflow-x: auto;
+      border: 1px solid #E2E8F0;
+      border-radius: 24px;
+      margin-bottom: 20px;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #FFFFFF;
+    }
+
+    .thName,
+    .thActions {
+      background: #e8edf2;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1a2c3e;
+      border-bottom: 1px solid #dde3ea;
+    }
+
+    .thActions {
+      padding-left: 40px;
+    }
+
+    .tdName,
+    .tdActions {
+      padding: 14px 16px;
+      font-size: 16px;
+      color: #374151;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .tdActions {
+      display: flex;
+      gap: 12px;
+      padding-left: 40px;
+    }
+
+    .btnEdit,
+    .btnDelete {
+      border: none;
+      border-radius: 30px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .btnEdit {
+      background: #e5e7eb;
+      color: #374151;
+    }
+
+    .btnDelete {
+      background: #fef3e2;
+      color: #d97706;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    .main {
+      padding: 32px 0;
+
+      .title {
+        font-size: 24px;
+        padding: 8px;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        margin-bottom: 32px;
+        padding: 0 16px;
+      }
+
+      .adminMenu {
+        gap: 16px;
+      }
+
+      .shopAdmin {
+        margin: 24px auto 0;
+      }
+
+      .shopHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .titleShop {
+        font-size: 20px;
+      }
+
+      .buttonShop {
+        width: 100%;
+        text-align: center;
+      }
+
+      .tableWrapper {
+        border-radius: 16px;
+      }
+
+      .thName,
+      .thActions {
+        padding: 10px 12px;
+        font-size: 12px;
+      }
+
+      .thActions {
+        padding-left: 20px;
+      }
+
+      .tdName,
+      .tdActions {
+        padding: 12px 12px;
+        font-size: 14px;
+      }
+
+      .tdActions {
+        padding-left: 20px;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .btnEdit,
+      .btnDelete {
+        padding: 5px 12px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    .main {
+      padding: 24px 0;
+
+      .title {
+        font-size: 20px;
+      }
+
+      .subtitle {
+        font-size: 13px;
+        margin-bottom: 24px;
+      }
+
+      .adminMenu {
+        gap: 12px;
+        padding: 0 12px;
+      }
+
+      .shopAdmin {
+        margin: 20px auto 0;
+        padding: 0 12px;
+      }
+
+      .titleShop {
+        font-size: 18px;
+      }
+
+      .thName,
+      .thActions {
+        padding: 8px 10px;
+        font-size: 11px;
+      }
+
+      .thActions {
+        padding-left: 12px;
+      }
+
+      .tdName,
+      .tdActions {
+        padding: 10px 10px;
+        font-size: 13px;
+      }
+
+      .tdActions {
+        padding-left: 12px;
+        gap: 6px;
+        flex-direction: column;
+      }
+
+      .btnEdit,
+      .btnDelete {
+        width: 100%;
+        text-align: center;
+        padding: 6px 10px;
+        font-size: 11px;
+      }
+    }
+  }
 }

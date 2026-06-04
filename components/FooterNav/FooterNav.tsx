@@ -9,7 +9,7 @@ const links = [
 
 export default function FooterNav() {
     return (
-        <div>
+        <div className={twstyles.container}>
             <h3 className={twstyles.navtitle}>Навигация</h3>
             <ul className={twstyles.navUl}>
                 {links.map(link => (

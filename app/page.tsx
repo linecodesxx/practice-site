@@ -4,7 +4,6 @@ import twstyles from "./twhome";
 import { ProductCard } from "@/components/ProductCard/ProductCard";
 import { BlogCard } from "@/components/BlogCard/BlogCard";
 import Link from "next/link";
-import { ArrowLeftIcon } from "lucide-react";
 
 const Info = [
   {
