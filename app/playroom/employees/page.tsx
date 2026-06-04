@@ -40,13 +40,10 @@ export default function Employees() {
     const [current, setCurrent] = useState<null | string>(null);
 
     const filter = (): EmployeeType[] => {
-        const filterByName = employees.filter(e => {
-            if (current === null || current === "") return [];
-            const filfil = e.name.toLowerCase().includes(current.toLowerCase())
-            return filfil;
-        })
-
-        return filterByName;
+        if (current === null || current === "") return employees;
+        return employees.filter(e =>
+            e.name.toLowerCase().includes(current.toLowerCase())
+        );
     }
 
     const filtered = filter();

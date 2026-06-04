@@ -1,0 +1,82 @@
+.employer_card {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #ffffff;
+    height: 180px;
+    border-radius: 24px;
+    border: 1px solid #e2e8f0;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 10px;
+    &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .namesec {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+
+        .avatar {
+            font-size: 48px;
+            padding-top: 10px;
+            padding-left: 4px;
+        }
+
+        .nameandjob {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            // border-left: 1px solid #e2e8f0;
+            padding-left: 12px;
+
+            .name {
+                font-size: 16px;
+                font-weight: 800;
+                color: #1a2c3e;
+            }
+
+            .job {
+                font-size: 13px;
+                color: #718096;
+            }
+
+            .department {
+                font-size: 13px;
+                color: #1a2c3e;
+            }
+
+            .info {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 4px;
+
+                .badgeCount {
+                    background-color: #edf2f7;
+                    padding: 4px 10px;
+                    border-radius: 16px;
+                    font-size: 11px;
+                    color: #1a2c3e;
+                }
+
+                .viewProfile {
+                    background-color: #edf2f7;
+                    padding: 4px 14px;
+                    border-radius: 16px;
+                    font-size: 13px;
+                    color: #718096;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                    
+
+                    &:hover {
+                        background-color: #d1d5db;
+                    }
+                }
+            }
+        }
+    }
+}
