@@ -1,0 +1,81 @@
+.questItem {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+
+    &.completed {
+        border-color: #68d391;
+        background-color: #f0fff4;
+    }
+
+    .number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #68d391;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        flex-shrink: 0;
+
+        &.numberDone {
+            background-color: #dd6b20;
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .title {
+            font-size: 17px;
+            font-weight: bold;
+            color: #1a2c3e;
+            margin: 0;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .bonus {
+                background-color: #68d391;
+                color: #ffffff;
+                padding: 4px 10px;
+                border-radius: 12px;
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            .statusDone {
+                font-size: 13px;
+                color: #68d391;
+                font-weight: 600;
+            }
+
+            .statusBtn {
+                background: none;
+                border: none;
+                color: #a0aec0;
+                font-size: 13px;
+                cursor: pointer;
+                padding: 0;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: #4a5568;
+                }
+            }
+        }
+    }
+}
