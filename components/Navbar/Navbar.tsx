@@ -137,6 +137,11 @@ const Navbar = () => {
                 <button type="button" className={styles.action}>
                   Log in
                 </button>
+                <button type="button" className={styles.account}>
+                  <Link href="/quests"> 
+                    <Astroid size={20}/>
+                  </Link>
+                </button>
                 <button
                   type="button"
                   className={styles.account}

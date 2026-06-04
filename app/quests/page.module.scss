@@ -1,80 +1,180 @@
 .page {
-    .main {
-        .title {
-            text-align: center;
-            padding: 10px;
-            text-transform: uppercase;
-            font-size: 32px;
-            font-weight: bold;
-            color: #1a2c3e;
-            margin-top: 20px;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #718096;
-            margin-bottom: 50px;
-        }
-
-        .questBody {
-            border: 1px solid #e2e8f0;
-            border-radius: 32px;
-            background-color: white;
-            width: min(1232px, 100%);
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 60px;
-
-            .infoNotice {
-                background-color: #edf2f7;
-                margin: 20px;
-                padding: 18px 22px;
-                border-radius: 20px;
-
-                p {
-                    font-size: 14px;
-                    color: #4a5568;
-                    margin: 0;
-                    line-height: 1.5;
-                }
-            }
-
-            .questList {
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-                padding: 24px;
-            }
-
-            .progressSection {
-                padding: 0 24px 24px;
-
-                .progressHeader {
-                    margin-bottom: 8px;
-
-                    .progressText {
-                        font-size: 14px;
-                        font-weight: 600;
-                        color: #1a2c3e;
-                    }
-                }
-
-                .progressBar {
-                    width: 100%;
-                    height: 8px;
-                    background-color: #edf2f7;
-                    border-radius: 4px;
-                    overflow: hidden;
-
-                    .progressFill {
-                        height: 100%;
-                        background-color: #68d391;
-                        border-radius: 4px;
-                        transition: width 0.3s ease;
-                    }
-                }
-            }
-        }
+  .main {
+    .title {
+      text-align: center;
+      padding: 10px;
+      text-transform: uppercase;
+      font-size: 32px;
+      font-weight: bold;
+      color: #1a2c3e;
+      margin-top: 20px;
     }
+
+    .subtitle {
+      text-align: center;
+      color: #718096;
+      margin-bottom: 50px;
+    }
+
+    .questBody {
+      border: 1px solid #e2e8f0;
+      border-radius: 32px;
+      background-color: white;
+      width: min(1232px, 100%);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 60px;
+
+      .infoNotice {
+        background-color: #edf2f7;
+        margin: 20px;
+        padding: 18px 22px;
+        border-radius: 20px;
+
+        p {
+          font-size: 14px;
+          color: #4a5568;
+          margin: 0;
+          line-height: 1.5;
+        }
+      }
+
+      .questList {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 24px;
+      }
+
+      .progressSection {
+        padding: 0 24px 24px;
+
+        .progressHeader {
+          margin-bottom: 8px;
+
+          .progressText {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a2c3e;
+          }
+        }
+
+        .progressBar {
+          width: 100%;
+          height: 8px;
+          background-color: #edf2f7;
+          border-radius: 4px;
+          overflow: hidden;
+
+          .progressFill {
+            height: 100%;
+            background-color: #68d391;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    .main {
+      .title {
+        font-size: 24px;
+        padding: 8px;
+        margin-top: 16px;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        margin-bottom: 32px;
+        padding: 0 16px;
+      }
+
+      .questBody {
+        border-radius: 24px;
+        margin-bottom: 40px;
+
+        .infoNotice {
+          margin: 16px;
+          padding: 14px 16px;
+          border-radius: 16px;
+
+          p {
+            font-size: 13px;
+          }
+        }
+
+        .questList {
+          gap: 10px;
+          padding: 16px;
+        }
+
+        .progressSection {
+          padding: 0 16px 16px;
+
+          .progressHeader {
+            margin-bottom: 6px;
+
+            .progressText {
+              font-size: 13px;
+            }
+          }
+
+          .progressBar {
+            height: 6px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    .main {
+      .title {
+        font-size: 20px;
+      }
+
+      .subtitle {
+        font-size: 13px;
+        margin-bottom: 24px;
+        padding: 0 12px;
+      }
+
+      .questBody {
+        border-radius: 20px;
+        margin-bottom: 32px;
+
+        .infoNotice {
+          margin: 12px;
+          padding: 12px 14px;
+          border-radius: 14px;
+
+          p {
+            font-size: 12px;
+          }
+        }
+
+        .questList {
+          gap: 8px;
+          padding: 12px;
+        }
+
+        .progressSection {
+          padding: 0 12px 12px;
+
+          .progressHeader {
+            .progressText {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
