@@ -1,114 +1,255 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 calc(50% - 12px);
+  min-width: 300px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 32px;
+
+  .itemIcon {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .titleSec {
     display: flex;
     flex-direction: column;
-    flex: 1 1 calc(50% - 12px);
-    min-width: 300px;
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 24px;
-    padding: 32px;
+    gap: 4px;
+    margin-bottom: 24px;
+
+    .itemTitle {
+      font-size: 20px;
+      font-weight: bold;
+      color: #1A2C3E;
+    }
+
+    .itemDesc {
+      font-size: 14px;
+      color: #718096;
+    }
+  }
+
+  .stats {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7fafc;
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+
+    .statRow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4px;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+
+    .statLabel {
+      font-size: 14px;
+      color: #1a2c3e;
+    }
+
+    .statValue {
+      font-size: 14px;
+      font-weight: bold;
+      color: #1a2c3e;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+
+      &.highlight {
+        color: #dd6b20;
+      }
+    }
+
+    .coin {
+      font-size: 16px;
+    }
+  }
+
+  .bidSection {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    .bidInput {
+      flex: 1;
+      min-width: 0;
+      height: 44px;
+      border: 1px solid #e2e8f0;
+      border-radius: 40px;
+      padding: 0 16px;
+      font-size: 14px;
+      background-color: #ffffff;
+      outline: none;
+      box-sizing: border-box;
+
+      &::placeholder {
+        color: #a0aec0;
+      }
+    }
+
+    .bidButton {
+      height: 44px;
+      padding: 0 28px;
+      border: none;
+      border-radius: 40px;
+      background-color: #2d3748;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+      box-sizing: border-box;
+
+      &:hover {
+        background-color: #1a202c;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex: 1 1 100%;
+    min-width: 0;
+    padding: 24px;
+    border-radius: 20px;
 
     .itemIcon {
-        font-size: 48px;
-        text-align: center;
-        margin-bottom: 24px;
+      font-size: 40px;
+      margin-bottom: 20px;
     }
 
     .titleSec {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        margin-bottom: 24px;
+      margin-bottom: 20px;
 
-        .itemTitle {
-            font-size: 20px;
-            font-weight: bold;
-            color: #1A2C3E;
-        }
+      .itemTitle {
+        font-size: 18px;
+      }
 
-        .itemDesc {
-            font-size: 14px;
-            color: #718096;
-        }
+      .itemDesc {
+        font-size: 13px;
+      }
     }
 
     .stats {
-        display: flex;
-        flex-direction: column;
-        background-color: #f7fafc;
-        border-radius: 16px;
-        padding: 20px 24px;
-        margin-bottom: 24px;
+      padding: 16px 18px;
+      margin-bottom: 20px;
+      border-radius: 14px;
 
-        .statRow {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            &:not(:last-child) {
-                margin-bottom: 12px;
-            }
+      .statRow {
+        &:not(:last-child) {
+          margin-bottom: 10px;
         }
+      }
 
-        .statLabel {
-            font-size: 14px;
-            color: #1a2c3e;
-        }
+      .statLabel {
+        font-size: 13px;
+      }
 
-        .statValue {
-            font-size: 14px;
-            font-weight: bold;
-            color: #1a2c3e;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+      .statValue {
+        font-size: 13px;
+      }
 
-            &.highlight {
-                color: #dd6b20;
-            }
-        }
-
-        .coin {
-            font-size: 16px;
-        }
+      .coin {
+        font-size: 15px;
+      }
     }
 
     .bidSection {
-        display: flex;
-        gap: 12px;
-        align-items: center;
+      flex-direction: row;
+      gap: 10px;
 
-        .bidInput {
-            flex: 1;
-            height: 44px;
-            border: 1px solid #e2e8f0;
-            border-radius: 40px;
-            padding: 0 16px;
-            font-size: 14px;
-            background-color: #ffffff;
-            outline: none;
+      .bidInput {
+        flex: 1;
+        min-width: 0;
+        height: 44px;
+        font-size: 13px;
+      }
 
-            &::placeholder {
-                color: #a0aec0;
-            }
-        }
-
-        .bidButton {
-            height: 44px;
-            padding: 0 28px;
-            border: none;
-            border-radius: 40px;
-            background-color: #2d3748;
-            color: #ffffff;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            white-space: nowrap;
-
-            &:hover {
-                background-color: #1a202c;
-            }
-        }
+      .bidButton {
+        height: 44px;
+        flex-shrink: 0;
+      }
     }
+  }
+}
+
+@media (max-width: 520px) {
+  .container {
+    padding: 20px;
+    border-radius: 16px;
+
+    .itemIcon {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    .titleSec {
+      margin-bottom: 16px;
+
+      .itemTitle {
+        font-size: 17px;
+      }
+
+      .itemDesc {
+        font-size: 12px;
+      }
+    }
+
+    .stats {
+      padding: 14px 16px;
+      margin-bottom: 16px;
+
+      .statLabel {
+        font-size: 12px;
+      }
+
+      .statValue {
+        font-size: 12px;
+      }
+
+      .coin {
+        font-size: 14px;
+      }
+    }
+
+    .bidSection {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+
+      .bidInput {
+        width: 100%;
+        min-height: 44px;
+        height: 44px;
+        line-height: normal;
+        font-size: 12px;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .bidButton {
+        width: 100%;
+        min-height: 44px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
 }
