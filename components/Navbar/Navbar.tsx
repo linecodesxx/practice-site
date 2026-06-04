@@ -4,7 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Search, ShoppingCart, User, X } from "lucide-react";
 import styles from "./Navbar.module.scss";
+import twstyles from "./navbarStyles";
 import { useState } from 'react';
+import useCartStore from "@/stores/cartStore";
 
 const links = [
   { href: "/", label: "Главная" },
@@ -14,6 +16,7 @@ const links = [
 ];
 
 const Navbar = () => {
+  const { items } = useCartStore();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -66,6 +69,11 @@ const Navbar = () => {
           <Link href="/cart">
             <ShoppingCart size={20} />
           </Link>
+          {items.length <= 0 ? null : 
+          (<div className={twstyles.circle}>
+            {items.length}
+          </div>
+          )}
         </button>
         <button type="button" className={styles.account}>
           <Link href="/profile">

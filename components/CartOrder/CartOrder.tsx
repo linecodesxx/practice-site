@@ -1,8 +1,29 @@
-import { ItemType } from "@/app/cart/page";
+import useCartStore from "@/stores/cartStore";
 import twstyles from "./cartorderStyles";
+import { useEffect, useState } from "react";
 
-export default function CartOrder({ items }: { items: ItemType[] }) {
-    const total = items.reduce((prev, curr) => prev + curr.price, 0);
+export default function CartOrder() {
+    const { getTotalPrice, ensureAlwaysPresentItem, removeItem, items } = useCartStore();
+    const [ isLoad, setIsLoad ] = useState<boolean>(false);
+
+    useEffect(() => {
+        ensureAlwaysPresentItem()
+    },[ensureAlwaysPresentItem])
+
+    const delay = () => new Promise((resolve) => setTimeout(resolve, 1000))
+    
+    const orderHandler = async () => {
+        setIsLoad(true)
+
+        try {
+            await delay();
+            items.forEach(item => removeItem(item.id))
+        } catch (error) {
+            console.log(error)
+        } finally {
+            setIsLoad(false)
+        }
+    }
 
     return (
         <div className={twstyles.wrapper}>
@@ -11,10 +32,10 @@ export default function CartOrder({ items }: { items: ItemType[] }) {
             </textarea>
             <div className={twstyles.summary}>
                 <span className={twstyles.summaryTitle}>Итого:</span>
-                <span className={twstyles.price}>{total} $</span>
+                <span className={twstyles.price}  suppressHydrationWarning>{getTotalPrice()} $</span>
             </div>
-            <button className={twstyles.button}>
-                Оформить
+            <button onClick={orderHandler} className={twstyles.button} disabled={isLoad}>
+                {isLoad ? 'Оформление...' : 'Оформить'}
             </button>
         </div>
     )

@@ -1,9 +1,11 @@
-import type { ItemType } from '../../app/cart/page';
 import twstyles from './cartlistStyle';
 import Image from 'next/image';
 import { TrashIcon } from 'lucide-react';
+import useCartStore from '@/stores/cartStore';
 
-export default function CartList({ items }: { items: ItemType[] }) {
+export default function CartList() {
+    const { removeItem, items } = useCartStore();
+
     return (
         <div className={twstyles.list}>
             {items.map(item => (
@@ -21,7 +23,7 @@ export default function CartList({ items }: { items: ItemType[] }) {
                             <p className={twstyles.title}>Кол-во: {item.quantity}</p>
                             <p className={twstyles.price}>{item.quantity * item.price} $</p>
                         </div>
-                        <button className={twstyles.button}>
+                        <button onClick={() => removeItem(item.id)} className={twstyles.button}>
                             <TrashIcon />
                         </button>
                     </div>

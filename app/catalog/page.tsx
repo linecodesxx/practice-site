@@ -1,6 +1,28 @@
 import twstyles from "./twcatalog";
 import { Sidebar } from '../../components/CatalogSidebar/Sidebar';
 import { Card } from "@/components/CatalogCard/Card";
+import { CartProduct } from "@/stores/cartStore";
+
+const products: CartProduct[] = [
+  {
+    id: 1,
+    name: 'Футболка STILT',
+    price: 250,
+    quantity: 1
+  },
+  {
+    id: 2,
+    name: 'Выходные в отеле',
+    price: 1250,
+    quantity: 1
+  },
+  {
+    id: 3,
+    name: 'Прыжок с парашютом',
+    price: 2100,
+    quantity: 1
+  }
+]
 
 export default function Catalog() {
   return (
@@ -13,9 +35,10 @@ export default function Catalog() {
         <section className={twstyles.section}>
           <Sidebar />
           <div className={twstyles.cards}>
-            <Card title="Футболка STILT" price={250} />
-            <Card title="Футболка STILT" price={250} />
-            <Card title="Футболка STILT" price={250} />            
+            {products.map(p => (
+              <Card key={p.id} id={p.id} name={p.name} 
+              price={p.price} quantity={p.quantity}/>
+            ))}           
           </div>
         </section>
       </main>
