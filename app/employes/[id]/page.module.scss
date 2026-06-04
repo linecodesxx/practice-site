@@ -1,0 +1,138 @@
+.page {
+    .main {
+        .title {
+            text-align: center;
+            padding: 10px;
+            text-transform: uppercase;
+            font-size: 32px;
+            font-weight: bold;
+            color: #1a2c3e;
+            margin-top:20px
+        }
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom:50px;
+        }
+
+        .userinfo {
+            display: flex;
+            width: min(1232px, 100%);
+            margin: 0 auto;
+            padding: 36px;
+            flex-direction: column;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 32px;
+            margin-bottom: 70px;
+            .namesec {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding-bottom: 24px;
+                border-bottom: 1px solid #e2e8f0;
+
+                .avatar {
+                    font-size: 64px;
+                }
+                .nameandbirth {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+
+                    .name {
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: #1a2c3e;
+                    }
+                    .birthday {
+                        font-size: 16px;
+                        color: #718096;
+                    }
+                    .giftbadge {
+                        margin-top: 8px;
+                        border: 1px solid #4a5568;
+                        border-radius: 40px;
+                        padding: 9px 23px;
+                        font-size: 14.4px;
+                        font-weight: bold;
+                        background: transparent;
+                        cursor: pointer;
+                        width: fit-content;
+                    }
+                }
+            }
+
+            .aboutsec {
+                display: flex;
+                flex-direction: column;
+                padding: 24px 0;
+                border-bottom: 1px solid #e2e8f0;
+
+                .aboutTitle {
+                    font-size: 19px;
+                    font-weight: bold;
+                    color: #1a2c3e;
+                    margin-bottom: 8px;
+                }
+                .aboutText {
+                    font-size: 16px;
+                    color: #1a2c3e;
+                }
+            }
+
+            .badgesec {
+                display: flex;
+                flex-direction: column;
+                padding: 24px 0;
+                border-bottom: 1px solid #e2e8f0;
+
+                .titlecount {
+                    display: flex;
+                    gap: 8px;
+                    margin-bottom: 16px;
+
+                    .badgeTitle,
+                    .badgeCount {
+                        font-size: 17.6px;
+                        color: #1a2c3e;
+                    }
+                    .badgeTitle {
+                        font-weight: bold;
+                    }
+                }
+                
+                .filterButtons {
+                    display: flex;
+                    gap: 10px;
+                    margin-bottom: 16px;
+
+                    .button_filter {
+                        border: none;
+                        border-radius: 30px;
+                        background-color: #EDF2F7;
+                        padding: 5px 14px;
+                        font-size: 13px;
+                        cursor: pointer;
+                    }
+                }
+                
+                .badgeList {
+                    display: flex;
+                    gap: 16px;
+                }
+            }
+
+            .lastActivitysec {
+                padding: 24px 0 0 0;
+
+                .lastActivityTitle {
+                    font-size: 19px;
+                    font-weight: bold;
+                    color: #1a2c3e;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}
